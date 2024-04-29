@@ -1,0 +1,20 @@
+Image:
+- docker image ls = untuk melihat list image yang telah di install
+- docker image pull nama-image = untuk download image dari docker registry / provider
+- docker image rm nama-image:tag = untuk menghapus image dari list image di local
+Container:
+- docker container ls = untuk melihat list container yang belum berjalan
+- docker container ls -a = untuk melihat semua container, baik yang sedang berjalan, berhenti, dsm.
+- docker container create --name nama-container nama-image:tag = untuk membuat container baru beserta image nya
+- docker container start containerId/nama-container = untuk menjalankan container
+- docker container stop containerId/nama-container = untuk memberhentikan container yang sedang berjalan
+- docker container rm containerId/nama-container = untuk menghapus container
+- docker container logs containerId/nama-container = untuk melihat logs container
+- docker container logs -f containerId/nama-container = untuk melihat logs container secara real-time
+- docker container exec -i -t containerId/nama-container = untuk masuk ke dalam container dan menjalankan nya 
+(-i adalah argument interaktif, menjaga input tetap aktif. -t adalah argument untuk alokasi pseudo-TTY (terminal akses))
+- docker container create --name nama-container --publish posthost:portcontainer nama-image:tag = untuk membuat container baru beserta image nya dan juga melakukan port forwarding
+- docker container create --name nama-container --env DB_USERNAME=root DB_PASSWORD= nama-image:tag = untuk membuat environment variables pada container
+- docker container stats = untuk melihat status / penggunaan resource container, seperti memory, cpu, dan semacamnya.
+- docker container create --name nama-container --publish posthost:portcontainer --memory 100m --cpus 0.5 nama-image:tag = untuk menambahkan pembatasan penggunaan memory dan cpu pada saat membuat container baru
+- docker run nama-image:tag = untuk membuat image baru sekaligus membuat container dan menjalankan containernya tersebut
