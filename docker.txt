@@ -18,3 +18,4 @@ Container:
 - docker container stats = untuk melihat status / penggunaan resource container, seperti memory, cpu, dan semacamnya.
 - docker container create --name nama-container --publish posthost:portcontainer --memory 100m --cpus 0.5 nama-image:tag = untuk menambahkan pembatasan penggunaan memory dan cpu pada saat membuat container baru
 - docker run nama-image:tag = untuk membuat image baru sekaligus membuat container dan menjalankan containernya tersebut
+- docker exec -it ubuntu-latest bash = untuk mengeksekusi atau menjalankan container ubuntu
